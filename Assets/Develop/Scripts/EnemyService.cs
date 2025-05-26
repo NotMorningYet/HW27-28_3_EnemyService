@@ -10,7 +10,7 @@ public class EnemyService : MonoBehaviour
     {
         Debug.Log($"Enemies count: {_enemies.Count}");
 
-        CheckEnemiesToDestroy();
+        DestroyEnemiesByCondition();
     }
 
     public void AddEnemy(Enemy enemy, Func<bool> destroyCondition)
@@ -18,7 +18,7 @@ public class EnemyService : MonoBehaviour
         _enemies.Add(enemy, destroyCondition);
     }
 
-    private void CheckEnemiesToDestroy()
+    private void DestroyEnemiesByCondition()
     {
         List<Enemy> enemiesToRemove = new();
 

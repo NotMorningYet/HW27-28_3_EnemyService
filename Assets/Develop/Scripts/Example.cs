@@ -38,7 +38,7 @@ public class Example : MonoBehaviour
     private void AddEnemyWithTimeCondition()
     {
         Enemy enemy = GetNewEnemy();
-        enemy.MaxLifeTime = GetlifeTime();
+        enemy.SetLifeTime(GetlifeTime());
 
         _enemyService.AddEnemy(enemy, () => enemy.IsLifeTimeExpired());
     }
